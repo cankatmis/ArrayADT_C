@@ -15,6 +15,7 @@ struct Array {
 void Display(struct Array arr);
 void Append(struct Array* arr, int x);
 void Insert(struct Array* arr, int index, int x);
+int Delete(struct Array* arr, int index);
 void Swap(int* x, int* y);
 int LinearSearch(struct Array* arr, int key);
 int BinarySearch(struct Array arr, int key);
@@ -27,7 +28,7 @@ int Sum(struct Array arr);
 float Avg(struct Array arr);
 void Reverse(struct Array* arr);
 void Reverse2(struct Array* arr);
-void InsertSort(struct Array* arr);
+void InsertSort(struct Array* arr, int x);
 int isSorted(struct Array arr);
 void Rearrange(struct Array* arr);
 struct Array* Merge(struct Array* arr1, struct Array* arr2);
