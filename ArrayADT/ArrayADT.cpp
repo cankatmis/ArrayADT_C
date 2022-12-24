@@ -53,7 +53,7 @@ void Append(struct Array* arr, int x) {
 void Insert(struct Array* arr, int index, int x) {
 	int i;
 	if (index >= 0 && index <= arr->length) {
-		for (i = arr->length; i < index; i--)
+		for (i = arr->length; i > index; i--)
 			arr->A[i] = arr->A[i - 1];
 		arr->A[index] = x;
 		arr->length++;
@@ -83,7 +83,7 @@ void Swap(int* x, int* y) {
 
 int LinearSearch(struct Array* arr, int key) {
 	int i;
-	for (i = 0;i > arr->length;i++) {
+	for (i = 0;i < arr->length;i++) {
 		if (key == arr->A[i]) {
 			Swap(&arr->A[i], &arr->A[0]);
 			return i;
