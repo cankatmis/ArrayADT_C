@@ -250,7 +250,7 @@ struct Array* Union(struct Array* arr1, struct Array* arr2) {
 	while (i < arr1->length && j < arr2->length) {
 		if (arr1->A[i] < arr2->A[j])
 			arr3->A[k++] = arr1->A[i++];
-		else if (arr1->A[j] < arr2->A[i])
+		else if (arr2->A[j] < arr1->A[i])
 			arr3->A[k++] = arr2->A[j++];
 		else {
 			arr3->A[k++] = arr1->A[i++];
@@ -277,7 +277,7 @@ struct Array* Intersection(struct Array* arr1, struct Array* arr2) {
 	while (i < arr1->length && j < arr2->length) {
 		if (arr1->A[i] < arr2->A[j])
 			i++;
-		else if (arr1->A[j] < arr2->A[i])
+		else if (arr2->A[j] < arr1->A[i])
 			j++;
 		else {
 			arr3->A[k++] = arr1->A[i++];
@@ -299,7 +299,7 @@ struct Array* Difference(struct Array* arr1, struct Array* arr2) {
 	while (i < arr1->length && j < arr2->length) {
 		if (arr1->A[i] < arr2->A[j])
 			arr3->A[k++] = arr1->A[i++];
-		else if (arr1->A[j] < arr2->A[i])
+		else if (arr2->A[j] < arr1->A[i])
 			j++;
 		else {
 			i++;
